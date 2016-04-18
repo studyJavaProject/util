@@ -1,0 +1,76 @@
+<REQUEST_COMMON_FPKJ class="REQUEST_COMMON_FPKJ"> 
+  <COMMON_FPKJ_FPT class="COMMON_FPKJ_FPT"> 
+    <FPQQLSH>00000000001</FPQQLSH>  
+    <DSPTBM>11110101</DSPTBM>  
+    <NSRSBH>110101HXXUQ5BP1</NSRSBH>  
+    <NSRMC>纳税人名称</NSRMC>
+    <NSRDZDAH/>  
+    <SWJG_DM/>
+    <DKBZ>0</DKBZ>
+    <PYDM/>
+    <KPXM>ThinkCentre E73</KPXM>  
+    <XHF_NSRSBH>44030032637415X</XHF_NSRSBH>
+    <XHF_MC>联想(上海)电子科技有限公司</XHF_MC>  
+    <XHF_DZ>上海市外高桥保税区芬菊路199号68号厂房</XHF_DZ>
+    <XHF_DH>50504500</XHF_DH>  
+    <XHF_YHZH>招商银行北京分行大屯路支行 121903163610306</XHF_YHZH>
+    <GHF_MC>个人</GHF_MC>  
+    <GHF_NSRSBH/>
+    <GHF_SF/>
+    <GHF_DZ/>
+    <GHF_GDDH/>  
+    <GHF_SJ>17710128962</GHF_SJ>
+    <GHF_EMAIL/>
+    <GHF_QYLX>03</GHF_QYLX>
+    <GHF_YHZH/>
+    <HY_DM></HY_DM>
+    <HY_MC/>
+    <KPY>联想</KPY>
+    <SKY>联想</SKY>
+    <FHR>联想</FHR>
+    <KPRQ/>  
+    <KPLX>1</KPLX>
+    <YFP_DM></YFP_DM>
+    <YFP_HM></YFP_HM>
+    <CZDM>10</CZDM>
+    <CHYY/>
+    <TSCHBZ>0</TSCHBZ>  
+    <KPHJJE>100</KPHJJE>
+    <HJBHSJE>85.470</HJBHSJE>
+    <KPHJSE>14.530</KPHJSE>
+    <BZ>订单号:N000071541</BZ>
+    <BYZD1></BYZD1>
+    <BYZD2/>
+    <BYZD3/>
+    <BYZD4/>
+    <BYZD5/>
+  </COMMON_FPKJ_FPT>  
+
+  <COMMON_FPKJ_XMXXS class="COMMON_FPKJ_XMXX;" size="1"> 
+    <COMMON_FPKJ_XMXX>
+      <XMMC>ThinkCentre E73</XMMC>
+      <XMDW>台</XMDW>
+      <GGXH>Think</GGXH>
+      <XMSL>1</XMSL>
+      <HSJBZ></HSJBZ>  
+      <XMDJ>85.470</XMDJ>
+      <XMBM/>
+      <XMJE>85.470</XMJE>
+      <SL>0.17</SL>
+      <SE>14.530</SE>
+      <BYZD1/>
+      <BYZD2/>
+      <BYZD3/>
+      <BYZD4/>
+      <BYZD5/>
+    </COMMON_FPKJ_XMXX>  
+  </COMMON_FPKJ_XMXXS>  
+
+  <COMMON_FPKJ_DDXX class="COMMON_FPKJ_DDXX">
+    <DDH>TH1508060000500462</DDH>
+    <THDH/>
+    <DDDATE/>
+  </COMMON_FPKJ_DDXX>  
+  <COMMON_FPKJ_ZFXX class="COMMON_FPKJ_ZFXX"/>  
+  <COMMON_FPKJ_WLXX class="COMMON_FPKJ_WLXX"/>
+</REQUEST_COMMON_FPKJ>
