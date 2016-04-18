@@ -7,11 +7,18 @@
   <description>赵睿的工具类jar包，集合大量的工具类和实现工具</description>
   
   <dependencies>
-  	<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-resources-plugin</artifactId>
-    <version>2.6</version>
-</dependency>
+  	<!-- 测试范围 -->
+    <dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.2</version>
+		<scope>test</scope>
+    </dependency>
+    <dependency>
+		<groupId>jdom</groupId>
+		<artifactId>jdom</artifactId>
+		<version>1.1</version>
+	</dependency>
   
   </dependencies>
 </project>
