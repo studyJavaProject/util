@@ -19,54 +19,53 @@ import rui.util.string.StringUtil;
 
 public class JdomUtil {
 	public static Map<String, Object> jdom(String xml,String packagePath){
+		Map<String , Object> map=null;
 		try {
 			StringReader reader=new StringReader(xml);
 			InputSource inputSource=new InputSource(reader);
 			SAXBuilder builder=new SAXBuilder();
 			Document document=builder.build(inputSource);
 			Element root=document.getRootElement();
-			Map<String, Object> map=null;
-			dealElement(map,root, packagePath);
+			map=dealElement(root, packagePath);
 		} catch (JDOMException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
-		return null;
+		return map;
 	}
 	
-	@SuppressWarnings("unchecked")
-	private static  Map<String, Object> dealElement(Map<String, Object> map,Element root,String packagePath){
+	private static  Map<String, Object> dealElement(Element root,String packagePath){
+		Map<String, Object> map=new HashMap<String, Object>();
 		List<?> list=root.getChildren();
 		for (int i = 0; i < list.size(); i++) {
 			Element element=(Element) list.get(i);
+			String name=element.getName();
+			@SuppressWarnings("unchecked")
 			List<Attribute> attributes=element.getAttributes();
 			if(attributes.size()==0){
-				Map<String, Object> params=getParamvalues(map, element, packagePath);
-				params.entrySet().iterator().next().getValue();
+				Map<String, Object> params=getParamvalues(element, packagePath);
+				map.put(name, params.get(name));
 			}else if(attributes.size()==1){
-				Object object=putElementToObject(map,attributes, element, packagePath);
-				map.put(element.getName(), object);
+				Object object=putElementToObject(attributes, element, packagePath);
+				map.put(name, object);
 			}else if(attributes.size()==2){
-				Object[] objects=putElementsToObjectArray(map,attributes, element, packagePath);
-				map.put(element.getName(), objects);
+				Object[] objects=putElementsToObjectArray(attributes, element, packagePath);
+				map.put(name, objects);
 			}
-			
 		}
 		
 		return map;
 	}
 	
-	public static Map<String, Object> getParamvalues(Map<String, Object> map,Element element,String packagePath){
+	public static Map<String, Object> getParamvalues(Element element,String packagePath){
 		Map<String, Object>paramMap=new HashMap<String, Object>();
 		@SuppressWarnings("unchecked")
 		List<Element> children=element.getChildren();
 		if(children.size()==0){
 			paramMap.put(element.getName(),element.getText());
 		}else{
-			paramMap.put(element.getName(), dealElement(map, element, packagePath));
+			paramMap.put(element.getName(), dealElement(element, packagePath));
 		}
 		return paramMap;
 	}
@@ -84,12 +83,12 @@ public class JdomUtil {
 	 * @author: 赵睿
 	 * @date: Created on 2016年4月18日 下午4:28:36
 	 */
-	public static Object putElementToObject(Map<String, Object> map,List<Attribute> attributes,
+	public static Object putElementToObject(List<Attribute> attributes,
 			Element element,String packagePath){
 		Object object=null;
 		if("class".equalsIgnoreCase(attributes.get(0).getName())){
 			String className=StringUtil.deleteSemicolon(attributes.get(0).getValue());
-			Map<String, Object> params=dealElement(map,element, packagePath);
+			Map<String, Object> params=dealElement(element, packagePath);
 			object=ReflexUtil.reflexClass(packagePath+"."+className, params);
 		}
 		return object;
@@ -106,7 +105,7 @@ public class JdomUtil {
 	 * @author: 赵睿
 	 * @date: Created on 2016年4月18日 下午5:02:55
 	 */
-	public static Object[] putElementsToObjectArray(Map<String, Object> map,List<Attribute> attributes,Element element,String packagePath){
+	public static Object[] putElementsToObjectArray(List<Attribute> attributes,Element element,String packagePath){
 		Object[] objects=null;
 		if("size".equalsIgnoreCase(attributes.get(1).getName())){
 			int size=Integer.valueOf(attributes.get(1).getValue());
@@ -114,7 +113,7 @@ public class JdomUtil {
 			Class clazz=ReflexUtil.reflexClass(packagePath+"."+StringUtil.deleteSemicolon(attributes.get(0).getValue()));
 			objects=(Object[]) Array.newInstance(clazz, size);
 			for (int i = 0; i < size; i++) {
-				Object object=putElementToObject(map,attributes, (Element) element.getChildren().get(i), packagePath);
+				Object object=putElementToObject(attributes, (Element) element.getChildren().get(i), packagePath);
 				Array.set(objects, i, object);
 			}
 		}

@@ -2,33 +2,33 @@ package rui.bean;
 
 public class COMMON_FPKJ_FPT {
 
-    private String FPQQLSH;// 发票请求唯一流水�?
+    private String FPQQLSH;// 发票请求唯一流水号
     private String DSPTBM;// 电商平台编码
-	private String NSRSBH;// �?票方识别�?
-    private String NSRMC;// �?票方名称
-    private String NSRDZDAH;// �?票方电子档案�?
+	private String NSRSBH;// 开票方识别号
+    private String NSRMC;// 开票方名称
+    private String NSRDZDAH;// 开票方电子档案号
     private String SWJG_DM;// 税务机构代码
     private String DKBZ;// 代开标志
     private String PYDM;// 票样代码
-    private String KPXM;// �?票项�?
-    private String XHF_NSRSBH;// �?货方识别�?
-    private String XHF_MC;// �?货方名称
-    private String GHF_MC;// 购货方名�?
+    private String KPXM;// 开票项目
+    private String XHF_NSRSBH;// 销货方识别号
+    private String XHF_MC;// 销货方名称
+    private String GHF_MC;// 购货方名称
     private String GHF_NSRSBH;// 购货方识别号
-    private String GHF_DZ;// 购货方地�?
-    private String GHF_GDDH;// 购货方固定电�?
-    private String GHF_SJ;// 购货方手�?
-    private String GHF_YX;// 购货方邮�?
+    private String GHF_DZ;// 购货方地址
+    private String GHF_GDDH;// 购货方固定电话
+    private String GHF_SJ;// 购货方手机
+    private String GHF_YX;// 购货方邮箱
     private String HY_DM;// 行业代码
     private String HY_MC;// 行业名称
-    private String KPY;// �?票员
-    private String SKY;// 收款�?
-//    private String KPRQ;// �?票日�?
-    private String KPLX;// �?票类�?
-    private String YFP_DM;// 原发票代�?
-    private String YFP_HM;// 原发票号�?
+    private String KPY;// 开票员
+    private String SKY;// 收款员
+//    private String KPRQ;// 开票日期
+    private String KPLX;// 开票类型
+    private String YFP_DM;// 原发票代码
+    private String YFP_HM;// 原发票号码
     private String CHYY;// 冲红原因
-    private String KPHJJE;// �?票合计金�?
+    private String KPHJJE;// 开票合计金额
     private String BZ;// 备注
     private String BYZD1;// 备用字段1
     private String BYZD2;// 备用字段2
@@ -36,30 +36,30 @@ public class COMMON_FPKJ_FPT {
     private String BYZD4;// 备用字段4
     private String BYZD5;// 备用字段5
     private String TSCHBZ;// 是否特殊冲红
-    private String GHF_SF;// 购货方省�?
-    private String GHF_QYLX;// 购货方企业类�?
+    private String GHF_SF;// 购货方省份
+    private String GHF_QYLX;// 购货方企业类型
     private String CZDM;// 操作代码
     /**
-     * fp�?具新增入库字�?
+     * fp开具新增入库字段
      * @date: Created on 2015-3-13 上午09:57:32 by zhongsiwei begin
      * 
      */
-    private String FHR;// 复核�?
-//    private String XHQD;// �?货清�?
-    private String HJBHSJE;//合计不含税金�?
+    private String FHR;// 复核人
+//    private String XHQD;// 销货清单
+    private String HJBHSJE;//合计不含税金额
     private String KPHJSE;//合计税额
-//    private String SSYF;//�?属月�?
-//    private String XHQDBZ;//�?货清单标�?
+//    private String SSYF;//所属月份
+//    private String XHQDBZ;//销货清单标志
 //    private String RETCODE;//返回编码
 //    private String FWMW;//防伪密文
-//    private String JYM;//校验�?
+//    private String JYM;//校验码
 //    private String SZQM;//数字签名
-//    private String FKFKHYH;//购方�?户行
-    private String FKF_YHZH;//购方银行及账�?
+//    private String FKFKHYH;//购方开户行
+    private String FKF_YHZH;//购方银行及账号
 //    private String SKFKHYH;//收款方开户行
     private String SKF_YHZH;//收款方银行及账号
-    private String XHF_DZ;//�?方地�?
-    private String XHF_DH;//�?方电�?
+    private String XHF_DZ;//销方地址
+    private String XHF_DH;//销方电话
     /**
      * @date: Created on 2015-3-13 上午09:57:32 by zhongsiwei end
      */

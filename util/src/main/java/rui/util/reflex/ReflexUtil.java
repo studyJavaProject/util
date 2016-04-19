@@ -40,20 +40,22 @@ public class ReflexUtil {
 	 * @date: Created on 2016年4月18日 下午2:49:42
 	 */
 	public static Object reflexClass(String classPath,Map<String, Object> map){
-			try {
+		Object object=null;	
+		try {
 				@SuppressWarnings("rawtypes")
 				Class clazz=reflexClass(classPath);
+				object=clazz.newInstance();
 				for(Entry<String, Object> entry:map.entrySet()){
 					String methodName="set"+StringUtil.upperFirst(entry.getKey());
 					@SuppressWarnings("unchecked")
 					Method method=clazz.getDeclaredMethod(methodName,new Class[]{String.class});
-					method.invoke(clazz.newInstance(), entry.getValue());
+					method.invoke(object, entry.getValue());
 				}
-				return clazz;
+				return object;
 			} catch (SecurityException e) {
 				e.printStackTrace();
 			} catch (NoSuchMethodException e) {
-				e.printStackTrace();
+				System.out.println("该方法不存在："+e.getMessage());
 			} catch (IllegalArgumentException e) {
 				e.printStackTrace();
 			} catch (IllegalAccessException e) {
@@ -63,6 +65,6 @@ public class ReflexUtil {
 			} catch (InstantiationException e) {
 				e.printStackTrace();
 			}
-		return null;
+		return object;
 	}
 }

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import rui.bean.COMMON_FPKJ_FPT;
 import rui.util.io.StreamParseUtil;
 import rui.util.jdom.JdomUtil;
 
@@ -16,7 +17,7 @@ public class JdomTest {
 		String xml=StreamParseUtil.toString(is);
 		String packagePath="rui.bean";
 		Map<String, Object> map=JdomUtil.jdom(xml, packagePath);
-		
-		
+		COMMON_FPKJ_FPT common_FPKJ_FPT=(COMMON_FPKJ_FPT) map.get("COMMON_FPKJ_FPT");
+		System.out.println(common_FPKJ_FPT.getBZ());
 	}
 }

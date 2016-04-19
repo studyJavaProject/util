@@ -22,7 +22,7 @@
     <GHF_SJ>17710128962</GHF_SJ>
     <GHF_EMAIL/>
     <GHF_QYLX>03</GHF_QYLX>
-    <GHF_YHZH/>
+    <FKF_YHZH/>
     <HY_DM></HY_DM>
     <HY_MC/>
     <KPY>联想</KPY>

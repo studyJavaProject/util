@@ -6,6 +6,7 @@ public class MapUtil {
 	
 	@SuppressWarnings("rawtypes")
 	public static Map putAll(Map fristMap,Map lastMap){
+		fristMap.putAll(lastMap);
 		return null;
 	}
 }
